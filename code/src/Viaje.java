@@ -1,3 +1,5 @@
+package code.src;
+
 public class Viaje{
     private Integer inicioViaje;
     private Integer finViaje;
@@ -27,7 +29,7 @@ public class Viaje{
         if(this.viajaAlPasado()){
             return this.inicioViaje - this.finViaje;
         }else{
-            this.finViaje - this.inicioViaje;
+            return this.finViaje - this.inicioViaje;
         }
     }
 

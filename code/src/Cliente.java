@@ -1,21 +1,22 @@
+package code.src;
 
 public class Cliente {
 	private String nombre;
 	private Integer envejecimiento;
 	private Boolean licencia;
 	private Viaje viaje;
-	
+
 	private Integer cantViajes=0;
-	
+
 	public void viajar () {
 		cantViajes+=cantViajes;
-		Viaje.viajar(this);
+		viaje.viajar(this);
 	}
 
 	public void setViaje(Viaje unaViaje) {
 		viaje=unaViaje;
 	}
-	
+
 	public void setLicencia (Boolean unaLicencia) {
 		licencia=unaLicencia;
 	}
