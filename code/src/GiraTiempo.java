@@ -2,13 +2,13 @@
 public class GiraTiempo implements Maquina{
 	
 	public void viajar (Cliente unCliente) {
-		Integer unaCant= 3*(unCliente.getAño()-unCliente.getFinViaje());
-		unCliente.setEnvejecimiento(unaCant);
-		
+		Viaje viaje = cliente.getViaje();
+		unCliente.setEnvejecimiento(3 * viaje.duracion());
 	}
 	
-	public void puedeViajar (Cliente unCliente) {
-		
+	public Boolean puedeViajar (Cliente unCliente) {
+		Viaje viaje = cliente.getViaje();
+		return viaje.viajaAlPasado();
 	}
 
 }
