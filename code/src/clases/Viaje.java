@@ -17,7 +17,7 @@ public class Viaje{
     }
 
     public Boolean viajaAlPasado(){
-        return this.anoActual > this.finViaje;
+        return this.anoActual > this.inicioViaje;
     }
 
     public Maquina getMaquina(){
@@ -40,6 +40,6 @@ public class Viaje{
 
     //cantidad de años que avanza al futuro
     public Integer salto(){
-        return finViaje - anoActual;
+        return inicioViaje - anoActual;
     }
 }

@@ -2,7 +2,7 @@ package clases;
 
 public interface Maquina {
 
-	void viajar (Cliente unCliente);
-	Boolean puedeViajar (Cliente unCliente); //se verifican requisitos
+	public void viajar (Cliente unCliente);
+	public Boolean puedeViajar (Cliente unCliente); //se verifican requisitos
 
 }
