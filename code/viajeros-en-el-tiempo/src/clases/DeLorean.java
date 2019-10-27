@@ -1,4 +1,5 @@
 package clases;
+
 public class DeLorean implements Maquina{
 	private Integer plutonio;
 

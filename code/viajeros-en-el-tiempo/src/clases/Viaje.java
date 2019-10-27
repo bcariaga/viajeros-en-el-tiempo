@@ -1,5 +1,6 @@
 package clases;
 
+
 public class Viaje{
     private Integer inicioViaje;
     private Integer finViaje;
@@ -29,16 +30,16 @@ public class Viaje{
             maquina.viajar(unCliente);
         }
     }
-    //necesitamos los 3 ya que cada maquina usa aÃ±os de forma dif
-    public Integer duracion(){ //dif aÃ±o inicio y aÃ±o de fin
+    //necesitamos los 3 ya que cada maquina usa años de forma dif
+    public Integer duracion(){ //dif año inicio y año de fin
         return finViaje - inicioViaje;
     }
 
     public Integer tiempoEnPasado(){ //tiempo en pasado
         return anoActual - inicioViaje;
-    }//dif aÃ±o de inicio aÃ±o actual
+    }//dif año de inicio año actual
 
-    //cantidad de aÃ±os que avanza al futuro
+    //cantidad de años que avanza al futuro
     public Integer salto(){
         return inicioViaje - anoActual;
     }
