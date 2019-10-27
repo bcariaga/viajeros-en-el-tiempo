@@ -1,9 +1,14 @@
-package Test;
+package test;
 
-import clases.*;
+import clases.Cliente;
+import clases.DeLorean;
+import clases.GiraTiempo;
+import clases.Icarus;
+import clases.Viaje;
+
 import junit.framework.TestCase;
 
-public class ClientsTest extends TestCase {
+public class ClienteTests extends TestCase {
     Cliente hermione = new Cliente(15, false);
     Cliente marty = new Cliente(17, true);
     DeLorean deLorean = new DeLorean(5000);

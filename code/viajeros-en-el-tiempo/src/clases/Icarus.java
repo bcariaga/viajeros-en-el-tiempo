@@ -1,6 +1,5 @@
 package clases;
 
-
 public class Icarus implements Maquina{
 
 	public void viajar (Cliente unCliente) {
