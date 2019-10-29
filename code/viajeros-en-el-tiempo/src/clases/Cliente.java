@@ -1,11 +1,12 @@
 package clases;
 
+import java.util.ArrayList;
+
 public class Cliente {
 
 	private Integer envejecimiento;
 	private Boolean licencia;
-	private Viaje viaje;
-	private Integer cantViajes = 0;
+	private ArrayList<Viaje> viajes = new ArrayList<Viaje>();
 
 	public Cliente(Integer envejecimiento, Boolean licencia) {
 
@@ -14,16 +15,11 @@ public class Cliente {
 	}
 
 	public Integer getCantViajes() {
-		return cantViajes;
+		return viajes.size();
 	}
 
-	public void viajar() {
-		cantViajes = cantViajes+1; //aumenta en uno cantidad de viajes
-		viaje.viajar(this); //manda viaje a maquina para que valide si cumple requisitos de viaje
-	}
-
-	public void setViaje(Viaje unViaje) {
-		viaje = unViaje;
+	public void viajo(Viaje unViaje) {
+		viajes.add(unViaje);
 	}
 
 	public void aumentarEnvejecimiento(Integer envejecimiento) {
@@ -36,10 +32,6 @@ public class Cliente {
 
 	public Boolean getLicencia() {
 		return licencia;
-	}
-
-	public Viaje getViaje() {
-		return viaje;
 	}
 
 	public Integer getEnvejecimiento() {

@@ -11,20 +11,23 @@ public class DeLorean implements Maquina{
 		return plutonio;
 	}
 
-	public void viajar (Cliente unCliente) {
-		this.plutonio -= cuantoPlutonioNecesita(unCliente);
+	public void viajar (Cliente unCliente, Viaje unViaje) {
+		if(puedeViajar(unCliente, unViaje)){
+			plutonio -= this.cuantoPlutonioNecesita(unCliente, unViaje);
+			unCliente.viajo(unViaje);
+		}
 	}
-	public Boolean puedeViajar (Cliente unCliente) {
-		return unCliente.getLicencia() && (cuantoPlutonioNecesita(unCliente) >= this.plutonio);
+	public Boolean puedeViajar (Cliente unCliente, Viaje unViaje) {
+		return unCliente.getLicencia() && (this.cuantoPlutonioNecesita(unCliente, unViaje) >= this.plutonio);
 	}
 
 	//solo calculo la cantidad de plutonio necesaria
-	public Integer cuantoPlutonioNecesita(Cliente unCliente){
+	public Integer cuantoPlutonioNecesita(Cliente unCliente, Viaje unViaje){
 		// usamos el viaje que tiene asignado el cliente
-		if(unCliente.getViaje().viajaAlPasado()){
-			return 500 * unCliente.getViaje().duracion();
+		if(unViaje.viajaAlPasado()){
+			return 500 * unViaje.duracion();
 		}else{
-			return 800 * (unCliente.getViaje().duracion() + unCliente.getViaje().salto());
+			return 800 * (unViaje.duracion() + unViaje.salto());
 		}
 	}
 }

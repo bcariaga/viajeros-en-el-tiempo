@@ -2,14 +2,13 @@ package clases;
 
 public class GiraTiempo implements Maquina{
 
-	public void viajar (Cliente unCliente) {
-		// usamos el viaje que tiene asignado el cliente
-		unCliente.aumentarEnvejecimiento(3 * unCliente.getViaje().tiempoEnPasado());
+	public void viajar(Cliente unCliente, Viaje unViaje) {
+		unCliente.aumentarEnvejecimiento(3 * unViaje.tiempoEnPasado());
+		unCliente.viajo(unViaje);
 	}
 
-	public Boolean puedeViajar (Cliente unCliente) {
-		// usamos el viaje que tiene asignado el cliente
-		return unCliente.getViaje().viajaAlPasado();
+	public Boolean puedeViajar(Cliente unCliente, Viaje unViaje) {
+		return unViaje.viajaAlPasado();//puede viajar si es al pasado
 	}
 
 }
